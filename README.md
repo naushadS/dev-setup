@@ -32,7 +32,9 @@ If you're interested in automation, `dev-setup` provides a customizable [setup s
 **Scripts tested on Ubuntu 16.04**
 
 * [Single Setup Script](#single-setup-script)
-* [utils.sh script](#pydatash-script)
+* [devtools.sh script](#devtools-script)
+    * Sets up Docker (open source software platform to create, deploy and manage virtualized application containers)
+* [utils.sh script](#utils-script)
     * Sets up XPAD (Simple Sticky note App.)
     * Sets up Redshift (Redshift adjusts the color temperature according to the position of the sun.  This may help your eyes hurt less if you are working in front of the screen at night.)
 
@@ -89,3 +91,48 @@ If you're interested in automation, `dev-setup` provides a customizable [setup s
 * [Credits](#credits)
 * [Contact Info](#contact-info)
 * [License](#license)
+
+## Section 1: Installation
+
+### Single Setup Script
+
+#### Running with Git
+
+##### Clone the Repo
+
+    $ git clone https://github.com/naushads/dev-setup.git && cd dev-setup
+
+**Since you probably don't want to install every section**, the `main.sh` script supports command line arguments to run only specified sections.  Simply pass in the [scripts](#scripts) that you want to install.  Below are some examples.
+
+**For more customization, you can [clone](#clone-the-repo) or [fork](https://github.com/naushads/dev-setup/fork) the repo and tweak the `main` script and its associated components to suit your needs.**
+
+Run all:
+
+    $ bash main.sh all
+
+Run `devtools.sh` and `utils.sh`:
+
+    $ bash main.sh devtools utils
+
+#### Running without Git
+
+    $ curl -O https://raw.githubusercontent.com/naushads/dev-setup/master/main && bash main.sh [Add ARGS Here]
+
+#### Scripts
+
+* [main](https://github.com/naushads/dev-setup/blob/master/main.js)
+    * Runs specified scripts
+* [devtools.sh](https://github.com/naushads/dev-setup/blob/master/devtools.sh)
+    * Sets up Devtools(Docker)
+* [utils.sh](https://github.com/naushads/dev-setup/blob/master/utils.sh)
+    * Sets up Utility Apps(Xpad and Redshift)
+
+**Notes:**
+
+* `main.sh` will initially prompt you to enter your password.
+* `main.sh` might ask you to re-enter your password at certain stages of the installation.
+* If ubuntu(linux) updates require a restart, simply run `main.sh` again to resume where you left off.
+* `main.sh` runs `sudo apt-get update` command, which takes a while to complete as some libraries need to be installed before proceeding.
+* **When `main.sh` completes, be sure to restart your computer for all updates to take effect.**
+
+I encourage you to read through Section 1 so you have a better idea of what each installation script does.  The following discussions describe in greater detail what is executed when running the [main.sh](https://github.com/naushads/dev-setup/blob/master/main.sh) script.
