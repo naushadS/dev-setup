@@ -18,6 +18,16 @@ function main(){
             #cd ~ && curl -#L https://github.com/naushads/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
         fi
         
+        if [ $ARG == "update" ] || [ $ARG == "all" ]; then
+            # Run the utils.sh Script
+            echo "------------------------------"
+            echo "Update packages and repositories"
+            echo "------------------------------"
+            echo ""
+            sudo apt-get update;
+            echo "";
+        fi
+        
         if [ $ARG == "utils" ] || [ $ARG == "all" ]; then
             # Run the utils.sh Script
             echo "------------------------------"

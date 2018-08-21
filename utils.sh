@@ -13,12 +13,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 latitude=19.04
 longitude=73.02
 
-####################################### Update packages and repositories############
-
-echo "Update packages & repositories";
-sudo apt-get update;
-echo "";
-
 ####################################### XPAD #######################################
 
 read -p "Install XPAD?" -n 1;
