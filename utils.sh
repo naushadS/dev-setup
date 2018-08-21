@@ -8,21 +8,55 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-echo "#######################################################";
-echo "### Redshift                                        ###";
-echo "#######################################################";
-echo "";
 
 #Variables
 latitude=19.04
 longitude=73.02
 
-echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Installing Redshift<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<";
-sudo apt-get install redshift redshift-gtk
+####################################### Update packages and repositories############
+
+echo "Update packages & repositories";
+sudo apt-get update;
 echo "";
 
-echo "Writing ~/.config/redshift.conf";
+####################################### XPAD #######################################
 
+read -p "Install XPAD?" -n 1;
+echo "";
+
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "";
+    echo "#######################################################";
+    echo "### XPAD                                            ###";
+    echo "#######################################################";
+    echo "";
+    
+    echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Installing XPAD<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<";
+    sudo apt-get install xpad;
+    echo "";
+    
+    # Confirmation of installation
+    sudo dpkg -l xpad
+    echo "";
+fi
+
+####################################### REDSHIFT ###################################
+read -p "Install Redshift?" -n 1;
+echo "";
+
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "";
+    echo "#######################################################";
+    echo "### Redshift                                        ###";
+    echo "#######################################################";
+    echo "";
+    
+    echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Installing Redshift<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<";
+    sudo apt-get install redshift redshift-gtk
+    echo "";
+    
+    echo "Writing ~/.config/redshift.conf";
+    
 cat >~/.config/redshift.conf <<EOL
 ; Global settings for redshift
 [redshift]
@@ -81,12 +115,13 @@ lon=${longitude}
 [randr]
 ;screen=1
 EOL
-
-echo "Finished Writing ~/.config/redshift.conf";
-echo "---------------------------------------------------------------------------------------";
-echo "---DO MANUALLY---";
-echo "1.Open ~/.config/autostart/redshift-gtk.desktop";
-echo "2.Set X-GNOME-Autostart-enabled=true";
-echo "---------------------------------------------------------------------------------------";
-
-echo "";
+    
+    echo "Finished Writing ~/.config/redshift.conf";
+    echo "---------------------------------------------------------------------------------------";
+    echo "---DO MANUALLY---";
+    echo "1.Open ~/.config/autostart/redshift-gtk.desktop";
+    echo "2.Set X-GNOME-Autostart-enabled=true";
+    echo "---------------------------------------------------------------------------------------";
+    
+    echo "";
+fi;

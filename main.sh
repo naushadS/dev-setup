@@ -24,20 +24,20 @@ function main(){
             echo "Setting up Utils"
             echo "------------------------------"
             echo ""
-            sh ./utils.sh
+            bash ./utils.sh
         fi
-
-		if [ $ARG == "test" ] || [ $ARG == "all" ]; then
+        
+        if [ $ARG == "test" ] || [ $ARG == "all" ]; then
             # Run the utils.sh Script
             echo "------------------------------"
-            echo "test"
+            echo "Test"
             echo "------------------------------"
             echo ""
-            sh ./temp.sh
+            bash ./temp.sh
         fi
-    echo "------------------------------"
-    echo "Completed running .main.sh, restart your computer to ensure all updates take effect"
-	echo "------------------------------"
+        echo "------------------------------"
+        echo "Completed running main.sh, restart your computer to ensure all updates take effect"
+        echo "------------------------------"
     done
 }
 

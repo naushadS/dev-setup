@@ -1,6 +1,7 @@
-# source ~/.config/autostart/redshift-gtk.desktop
-# echo "X-GNOME-Autostart-enabled", ${X\-GNOME\-Autostart\-enabled}
+#!/usr/bin/env bash
 
+# Ask for the administrator password upfront.
+#sudo -v
 
-result=$(grep '^X-GNOME-Autostart-enabled' ~/.config/autostart/redshift-gtk.desktop | sed 's/^X-GNOME-Autostart-enabled=//');
-echo $result;
+# Keep-alive: update existing `sudo` time stamp until the script has finished.
+#while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &

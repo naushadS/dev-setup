@@ -33,7 +33,8 @@ If you're interested in automation, `dev-setup` provides a customizable [setup s
 
 * [Single Setup Script](#single-setup-script)
 * [utils.sh script](#pydatash-script)
-    * Sets up Redshift
+    * Sets up XPAD (Simple Sticky note App.)
+    * Sets up Redshift (Redshift adjusts the color temperature according to the position of the sun.  This may help your eyes hurt less if you are working in front of the screen at night.)
 
 ## Section 2: Developer Tools
 
