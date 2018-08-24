@@ -148,7 +148,7 @@ I encourage you to read through Section 1 so you have a better idea of what each
   <br/>
 </p>
 
-To set up common data stores, run the `devtools.sh` script:
+To set up developer tools, run the `devtools.sh` script:
 
     $ ./devtools.sh
 
@@ -164,6 +164,17 @@ To set up common data stores, run the `datastores.sh` script:
     $ ./datastores.sh
 
 [Section 5: Data Stores](#section-5-data-stores) describes the installed packages and usage.
+
+### utilities.sh script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/xcode.jpg">
+  <br/>
+</p>
+
+To set up utilities, run the `utilities.sh` script:
+
+    $ ./utilities.sh
 
 ## Section 2: Developer Tools
 
@@ -243,7 +254,7 @@ Bug reports, suggestions, and pull requests are [welcome](https://github.com/nau
 
 See the [Credits Page](https://github.com/naushadS/dev-setup/blob/master/CREDITS.md).
 
-## Contact Info
+### Contact Info
 
 Feel free to contact me to discuss any issues, questions, or comments.
 

@@ -12,10 +12,10 @@ function main(){
         if [ $ARG == "bootstrap" ] || [ $ARG == "all" ]; then
             echo "";
             echo "------------------------------";
-            echo "Syncing the dev-setup repo to your local machine.";
+            echo "Syncing the dev-setup repo to your local machine at ~/.";
             echo "------------------------------";
             echo "";
-            #cd ~ && curl -#L https://github.com/naushads/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
+            cd ~ && curl -#L https://github.com/naushads/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
         fi
         
         if [ $ARG == "update" ] || [ $ARG == "all" ]; then
@@ -37,7 +37,7 @@ function main(){
             echo "";
             bash ./devtools.sh
         fi
-
+        
         if [ $ARG == "datastores" ] || [ $ARG == "all" ]; then
             # Run the datastores.sh Script
             echo "------------------------------";
@@ -47,7 +47,7 @@ function main(){
             echo "";
             bash ./datastores.sh
         fi
-
+        
         if [ $ARG == "utils" ] || [ $ARG == "all" ]; then
             # Run the utils.sh Script
             echo "------------------------------";
@@ -58,6 +58,15 @@ function main(){
             bash ./utils.sh
         fi
 
+        if [ $ARG == "test" ] || [ $ARG == "all" ]; then
+            # Run the utils.sh Script
+            echo "------------------------------";
+            echo "Test";
+            echo "------------------------------";
+            echo "";
+            bash ./temp.sh
+        fi
+        
         echo "------------------------------"
         echo "Completed running main.sh, restart your computer to ensure all updates take effect"
         echo "------------------------------"
