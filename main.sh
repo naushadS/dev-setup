@@ -38,6 +38,16 @@ function main(){
             bash ./devtools.sh
         fi
 
+        if [ $ARG == "datastores" ] || [ $ARG == "all" ]; then
+            # Run the datastores.sh Script
+            echo "------------------------------";
+            echo "Setting up datastores";
+            echo "? Redis";
+            echo "------------------------------";
+            echo "";
+            bash ./datastores.sh
+        fi
+
         if [ $ARG == "utils" ] || [ $ARG == "all" ]; then
             # Run the utils.sh Script
             echo "------------------------------";
@@ -47,15 +57,7 @@ function main(){
             echo "";
             bash ./utils.sh
         fi
-        
-        if [ $ARG == "test" ] || [ $ARG == "all" ]; then
-            # Run the utils.sh Script
-            echo "------------------------------";
-            echo "Test";
-            echo "------------------------------";
-            echo "";
-            bash ./temp.sh
-        fi
+
         echo "------------------------------"
         echo "Completed running main.sh, restart your computer to ensure all updates take effect"
         echo "------------------------------"
