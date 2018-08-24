@@ -112,9 +112,16 @@ EOL
     
     echo "Finished Writing ~/.config/redshift.conf";
     echo "---------------------------------------------------------------------------------------";
-    echo "---DO MANUALLY---";
-    echo "1.Open ~/.config/autostart/redshift-gtk.desktop";
-    echo "2.Set X-GNOME-Autostart-enabled=true";
+    echo "---Setting redshift to autostart on system startup---";
+    ### using sed to replace string
+    # Like this:
+    # sed -i 's/foo.*/bar/g' filename.txt
+    # to update the file pass -i option
+    # s stands for search and replace
+    # .* is for wild card characters
+    # If you want to guarantee that foo is at the start of the line, make it:
+    # sed 's/^foo.*/bar/g'
+    sed -i 's/^X-GNOME-Autostart-enabled=false/X-GNOME-Autostart-enabled=true/g' ~/.config/autostart/redshift-gtk.desktop
     echo "---------------------------------------------------------------------------------------";
     
     echo "";
