@@ -53,7 +53,6 @@ If you're interested in automation, `dev-setup` provides a customizable [setup s
 * [Chrome](#chrome)
 * [Mozilla](#mozilla)
 * [Visual Studio Code](#visualstudiocode)
-* [Docker](#docker)
 
 ## Section 4: Data Science Tools
 
@@ -125,7 +124,7 @@ Run `devtools.sh` and `utils.sh`:
 * [main](https://github.com/naushads/dev-setup/blob/master/main.js)
     * Runs specified scripts
 * [devtools.sh](https://github.com/naushads/dev-setup/blob/master/devtools.sh)
-    * Sets up Devtools(Docker)
+    * Sets up Developer tools(Docker)
 * [datastores.sh](https://github.com/naushads/dev-setup/blob/master/datastores.sh)
     * Sets up Data Stores(Redis)
 * [utils.sh](https://github.com/naushads/dev-setup/blob/master/utils.sh)
@@ -178,10 +177,6 @@ To set up utilities, run the `utilities.sh` script:
 
 ## Section 2: Developer Tools
 
-***This section is under development.***
-
-## Section 3: Developer Apps
-
 ### Docker
 
 <p align="center">
@@ -190,6 +185,10 @@ To set up utilities, run the `utilities.sh` script:
 </p>
 
 Docker automates the deployment of applications inside software containers.  I think the following [quote](http://www.linux.com/news/enterprise/cloud-computing/731454-docker-a-shipping-container-for-linux-code) explains docker nicely: "Docker is a tool that can package an application and its dependencies in a virtual container that can run on any Linux server. This helps enable flexibility and portability on where the application can run, whether on premise, public cloud, private cloud, bare metal, etc".
+
+## Section 3: Developer Apps
+
+***This section is under development.***
 
 #### Installation
 
