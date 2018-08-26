@@ -32,10 +32,10 @@ If you're interested in automation, `dev-setup` provides a customizable [setup s
 **Scripts tested on Ubuntu 16.04**
 
 * [Single Setup Script](#single-setup-script)
-* [datastores.sh script](#datastoressh-script)
-    * Sets up Redis (open-source in-memory database project implementing a distributed, in-memory key-value store with optional durability.)
 * [devtools.sh script](#devtools-script)
     * Sets up Docker (open source software platform to create, deploy and manage virtualized application containers)
+* [datastores.sh script](#datastoressh-script)
+    * Sets up Redis (open-source in-memory database project implementing a distributed, in-memory key-value store with optional durability.)
 * [utils.sh script](#utils-script)
     * Sets up XPAD (Simple Sticky note App.)
     * Sets up Redshift (Redshift adjusts the color temperature according to the position of the sun.  This may help your eyes hurt less if you are working in front of the screen at night.)
@@ -186,13 +186,13 @@ To set up utilities, run the `utilities.sh` script:
 
 Docker automates the deployment of applications inside software containers.  I think the following [quote](http://www.linux.com/news/enterprise/cloud-computing/731454-docker-a-shipping-container-for-linux-code) explains docker nicely: "Docker is a tool that can package an application and its dependencies in a virtual container that can run on any Linux server. This helps enable flexibility and portability on where the application can run, whether on premise, public cloud, private cloud, bare metal, etc".
 
-## Section 3: Developer Apps
-
-***This section is under development.***
-
 #### Installation
 
 The [devtools.sh script](#devtoolssh-script) installs Docker.
+
+## Section 3: Developer Apps
+
+***This section is under development.***
 
 ## Section 4: Data Science Tools
 
