@@ -126,6 +126,7 @@ EOL
     echo "!!!!!!!!!!!!!!! READ INSTRUCTION !!!!!!!!!!!!!!!!!";
     read -n 1 -p "Start redshift manually and press any key";
     sudo sed -i 's/^X-GNOME-Autostart-enabled=false/X-GNOME-Autostart-enabled=true/g' ~/.config/autostart/redshift-gtk.desktop
+    sudo sed -i 's/^Hidden=true/Hidden=false/g' ~/.config/autostart/redshift-gtk.desktop
     echo "---------------------------------------------------------------------------------------";
     
     echo "";
