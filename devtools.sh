@@ -8,6 +8,37 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+####################################### GIT #######################################
+
+read -p "Install Git? " -n 1;
+echo "";
+
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "";
+    echo "#######################################################";
+    echo "### Git                                             ###";
+    echo "#######################################################";
+    echo "";
+    
+    echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Installing Git<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<";
+    sudo apt update
+    sudo apt install git
+    echo "Installed version:" && git --version
+    echo "Enter global user.name for git: "
+    read username_git
+    git config --global user.name $username_git
+    echo "Enter global user.email for git: "
+    read useremail_git
+    git config --global user.email $useremail_git
+    echo "Set Git Config:"
+    git config --list
+    echo "Git Installed and Configured!"
+    echo "installing meld and setting it as default difftool";
+    sudo apt install meld
+    git config --global diff.tool meld
+    echo "";
+fi;
+
 ####################################### DOCKER #######################################
 
 read -p "Install Docker? " -n 1;
