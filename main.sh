@@ -57,6 +57,16 @@ function main(){
             echo "";
             bash ./utils.sh
         fi
+
+
+        if [ $ARG == "test" ] || [ $ARG == "all" ]; then
+            # Run the utils.sh Script
+            echo "------------------------------";
+            echo "Test";
+            echo "------------------------------";
+            echo "";
+            bash ./test.sh
+        fi
         
         echo "------------------------------"
         echo "Completed running main.sh, restart your computer to ensure all updates take effect"
