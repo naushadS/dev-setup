@@ -117,7 +117,7 @@ Run `devtools.sh` and `utils.sh`:
 
 #### Running without Git
 
-    $ curl -O https://raw.githubusercontent.com/naushads/dev-setup/master/main && bash main.sh [Add ARGS Here]
+    $ wget https://github.com/naushadS/dev-setup/archive/master.zip && unzip master.zip && rm master.zip && cd dev-setup-master/ && bash main.sh [Add ARGS Here]
 
 #### Scripts
 
