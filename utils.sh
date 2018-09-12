@@ -121,6 +121,10 @@ EOL
     # .* is for wild card characters
     # If you want to guarantee that foo is at the start of the line, make it:
     # sed 's/^foo.*/bar/g'
+    sleep 2s;
+    echo "";
+    echo "!!!!!!!!!!!!!!! READ INSTRUCTION !!!!!!!!!!!!!!!!!";
+    read -n 1 -p "Start redshift manually and press any key";
     sudo sed -i 's/^X-GNOME-Autostart-enabled=false/X-GNOME-Autostart-enabled=true/g' ~/.config/autostart/redshift-gtk.desktop
     echo "---------------------------------------------------------------------------------------";
     
