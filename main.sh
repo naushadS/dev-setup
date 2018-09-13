@@ -15,7 +15,7 @@ function main(){
             echo "Syncing the dev-setup repo to your local machine at ~/.";
             echo "------------------------------";
             echo "";
-            cd ~ && curl -#L https://github.com/naushads/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
+            cd ~ && mkdir dev-setup && cd dev-setup && curl -#L https://github.com/naushads/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
         fi
         
         if [ $ARG == "update" ] || [ $ARG == "all" ]; then
@@ -70,7 +70,7 @@ function main(){
         
         #Install dependencies
         sudo apt-get install -f
-        
+
         echo "------------------------------"
         echo "Completed running main.sh, restart your computer to ensure all updates take effect"
         echo "------------------------------"
