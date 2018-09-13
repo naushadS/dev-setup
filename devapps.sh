@@ -47,10 +47,88 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     vscodedebfile="$(ls ~/Downloads/code_*.deb)"
     sudo dpkg -i "${vscodedebfile}"
     echo "cleaning up .deb installer file"
-    rm "${vscodedebfile}"	
+    rm "${vscodedebfile}"
     echo "Visual Studio Code Installed!"
     echo "";
 
+fi
+
+####################################### Postman #######################################
+
+read -p "Install Postman? (press y for yes)" -n 1;
+echo "";
+
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "";
+    echo "#######################################################";
+    echo "### Postman                                         ###";
+    echo "#######################################################";
+    echo "";
+    sudo snap install postman
+fi
+
+####################################### Slack #######################################
+
+read -p "Install Slack? (press y for yes)" -n 1;
+echo "";
+
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "";
+    echo "#######################################################";
+    echo "### Slack                                           ###";
+    echo "#######################################################";
+    echo "";
+    sudo snap install slack --classic
+fi
+
+####################################### Sky for Linux #######################################
+echo "sky for linux (skype for business client):"
+read -p "Install Sky for Linux? (press y for yes)" -n 1;
+echo "";
+
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "";
+    echo "#######################################################";
+    echo "### Sky for Linux                                   ###";
+    echo "#######################################################";
+    echo "";
+    sudo sed -i '/https\?:\/\/.*\btel.red\b/d' /etc/apt/sources.list
+    sudo apt-get install apt-transport-https ca-certificates
+    sudo sh -c 'echo deb https://tel.red/repos/ubuntu bionic non-free \
+        > /etc/apt/sources.list.d/telred.list'
+    sudo apt-key adv \
+        --keyserver hkp://keyserver.ubuntu.com:80 \
+        --recv-keys 9454C19A66B920C83DDF696E07C8CCAFCE49F8C5
+    sudo apt-get update
+    sudo apt-get install sky
+fi
+
+####################################### VLC media player #######################################
+
+read -p "Install VLC media player? (press y for yes)" -n 1;
+echo "";
+
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "";
+    echo "#######################################################";
+    echo "### VLC media player                                   ###";
+    echo "#######################################################";
+    echo "";
+    sudo snap install vlc
+fi
+
+####################################### Spotify #######################################
+
+read -p "Install Spotify? (press y for yes)" -n 1;
+echo "";
+
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "";
+    echo "#######################################################";
+    echo "### Spotify                                   ###";
+    echo "#######################################################";
+    echo "";
+    sudo snap install spotify
 fi
 
 #Install dependencies
