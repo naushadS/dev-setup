@@ -8,9 +8,13 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+#Variables
+node_stable=8.10.0
+node_latest=10.10.0
+
 ####################################### GIT #######################################
 
-read -p "Install Git? " -n 1;
+read -p "Install Git? (press y for yes)" -n 1;
 echo "";
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -37,11 +41,44 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     sudo apt install meld
     git config --global diff.tool meld
     echo "";
-fi;
+fi
+
+####################################### NODE.js #######################################
+
+read -p "Install Node.js? (press y for yes)" -n 1;
+echo "";
+
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "";
+    echo "#######################################################";
+    echo "### Node.js                                         ###";
+    echo "#######################################################";
+    echo "";
+    
+    echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Installing node via nvm way<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<";
+    wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+
+    export NVM_DIR="$HOME/.nvm" 
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+    echo "";
+
+    echo "Testing nvm installation:";
+    command -v nvm
+
+    nvm install ${node_stable}
+    nvm install ${node_latest}
+    nvm alias latest ${node_latest}
+    nvm alias stable ${node_stable}
+    nvm alias default stable
+    nvm alias node default
+    nvm use default
+    echo "Installed node and npm!";
+fi
 
 ####################################### DOCKER #######################################
 
-read -p "Install Docker? " -n 1;
+read -p "Install Docker? (press y for yes)" -n 1;
 echo "";
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -99,3 +136,5 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "";
     echo "";
 fi
+#Install dependencies
+sudo apt-get install -f

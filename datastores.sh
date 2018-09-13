@@ -13,7 +13,7 @@ repoWorkingDirectory=$(pwd)
 
 ####################################### REDIS #######################################
 
-read -p "Install Redis? " -n 1;
+read -p "Install Redis? (press y for yes)" -n 1;
 echo "";
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -113,3 +113,6 @@ EOL
     cd ${repoWorkingDirectory}
     
 fi
+
+#Install dependencies
+sudo apt-get install -f

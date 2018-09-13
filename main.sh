@@ -68,6 +68,9 @@ function main(){
             bash ./test.sh
         fi
         
+        #Install dependencies
+        sudo apt-get install -f
+        
         echo "------------------------------"
         echo "Completed running main.sh, restart your computer to ensure all updates take effect"
         echo "------------------------------"

@@ -15,7 +15,7 @@ longitude=73.02
 
 ####################################### XPAD #######################################
 
-read -p "Install XPAD?" -n 1;
+read -p "Install XPAD? (press y for yes)" -n 1;
 echo "";
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -35,7 +35,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 fi
 
 ####################################### REDSHIFT ###################################
-read -p "Install Redshift?" -n 1;
+read -p "Install Redshift? (press y for yes)" -n 1;
 echo "";
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -130,4 +130,7 @@ EOL
     echo "---------------------------------------------------------------------------------------";
     
     echo "";
-fi;
+fi
+
+#Install dependencies
+sudo apt-get install -f
