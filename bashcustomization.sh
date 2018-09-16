@@ -55,22 +55,6 @@ alias gb='git branch -v'
 alias gr='git remote -v'
 alias gp='git pull'
 
-alias ndown='cd /home/naushad/Downloads'
-alias nopt='cd /opt'
-alias nlearn='cd /home/naushad/code/javascript/learn/nodejs'
-alias nwork='cd /home/naushad/code/javascript/work'
-alias ntor='cd /home/naushad/Downloads/tor-browser_en-US'
-alias nds='cd ~/code/DataScience/'
-alias nml='cd ~/code/DataScience/Machine-Learning/'
-alias nbash='cd ~/code/bash/'
-alias nke='cd ~/code/DataScience/Kaggle/'
-alias nkc='cd ~/code/DataScience/Kaggle/competitions/'
-alias nkk='cd ~/code/DataScience/Kaggle/kernels/'
-alias njiocj='ssh jiomedia@10.49.120.23' #jump server for accessing dev/qa/prod
-alias njiocsj='ssh jiocinema@10.130.33.185' #jump server for accessing subscription servers
-alias gnp='ssh -T git@github'
-alias gnw='ssh -T git@gitlab'
-
 EOF
 source ~/.bashrc
 echo "aliases added!"

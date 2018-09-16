@@ -136,5 +136,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "";
     echo "";
 fi
+
 #Install dependencies
 sudo apt-get install -f

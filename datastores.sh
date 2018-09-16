@@ -107,6 +107,26 @@ EOL
 
     echo "";
 
+####################################### Mongodb #######################################
+
+read -p "Install Mongodb? (press y for yes)" -n 1;
+echo "";
+
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "";
+    echo "#######################################################";
+    echo "### Mongodb                                         ###";
+    echo "#######################################################";
+    echo "";
+    sudo apt update
+    sudo apt install -y mongodb
+    sudo systemctl status mongodb
+    mongo --eval 'db.runCommand({ connectionStatus: 1 })'
+    #disable automatic start on startup
+    sudo systemctl disable mongodb
+fi
+
+
     ###########################################FINISHING STEPS####################################
 
     #restore current working directory to repo's root path

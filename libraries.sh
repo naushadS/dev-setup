@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#Installing helpers
+#Installing essential libraries
 
 # Ask for the administrator password upfront.
 sudo -v
@@ -8,7 +8,18 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-#bash tool to autocorrect command-typos
+#installing gcc compiler:
+sudo apt-get install build-essential
+
+#for media codecs to play .mp4,.api etc:
+sudo apt install ubuntu-restricted-extras
+
+#for netflix:
+sudo apt-get install libavcodec-extra
+
+#pipreqs - Generate requirements.txt file for any project based on imports
+pip install pipreqs
+
 ####################################### thefuck ###################################
 read -p "Install thefuck? (press y for yes)" -n 1;
 echo "";
@@ -36,7 +47,7 @@ echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "";
     echo "#######################################################";
-    echo "### beautysh                                         ###";
+    echo "### beautysh                                        ###";
     echo "#######################################################";
     echo "";
 
@@ -45,3 +56,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     #beautifysh -f ./*.sh
     echo "";
 fi
+
+#Install dependencies
+sudo apt-get install -f
+

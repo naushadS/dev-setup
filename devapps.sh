@@ -67,20 +67,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     sudo snap install postman
 fi
 
-####################################### Slack #######################################
-
-read -p "Install Slack? (press y for yes)" -n 1;
-echo "";
-
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    echo "";
-    echo "#######################################################";
-    echo "### Slack                                           ###";
-    echo "#######################################################";
-    echo "";
-    sudo snap install slack --classic
-fi
-
 ####################################### Sky for Linux #######################################
 echo "sky for linux (skype for business client):"
 read -p "Install Sky for Linux? (press y for yes)" -n 1;

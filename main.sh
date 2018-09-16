@@ -61,7 +61,7 @@ function main(){
             # Run the datastores.sh Script
             echo "------------------------------";
             echo "Setting up datastores";
-            echo "Currently Supported Options: Redis";
+            echo "Currently Supported Options: Redis, Mongodb";
             echo "------------------------------";
             echo "";
             bash ./datastores.sh
@@ -77,21 +77,30 @@ function main(){
             bash ./utils.sh
         fi
 
-        if [ $ARG == "helpers" ] || [ $ARG == "all" ]; then
-            # Run the helpers.sh Script
+        if [ $ARG == "libraries" ] || [ $ARG == "all" ]; then
+            # Run the libraries.sh Script
             echo "------------------------------";
-            echo "Setting up helpers";
+            echo "Setting up libraries";
             echo "Currently Supported Options: thefuck, beautysh";
             echo "------------------------------";
             echo "";
-            bash ./helpers.sh
+            bash ./libraries.sh
+        fi
+
+        if [ $ARG == "miscellaneous" ] || [ $ARG == "all" ]; then
+            # Run the miscellaneous.sh Script
+            echo "------------------------------";
+            echo "Setting up miscellaneous";
+            echo "------------------------------";
+            echo "";
+            bash ./miscellaneous.sh
         fi
 
         if [ $ARG == "bashcustomization" ] || [ $ARG == "all" ]; then
             # Run the bashcustomization.sh Script
             echo "------------------------------";
             echo "Setting up bashcustomization";
-            echo "Currently Supported Options: Bash Prompt String Customiation, Bash Aliases";
+            echo "Currently Supported Options: Bash Prompt String Customiation, Genreraal Bash Aliases";
             echo "------------------------------";
             echo "";
             bash ./bashcustomization.sh
