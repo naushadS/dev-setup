@@ -15,7 +15,7 @@ longitude=73.02
 
 ####################################### XPAD #######################################
 
-read -p "Install XPAD?" -n 1;
+read -p "Install XPAD? (press y for yes)" -n 1;
 echo "";
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -24,18 +24,18 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "### XPAD                                            ###";
     echo "#######################################################";
     echo "";
-    
+
     echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Installing XPAD<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<";
     sudo apt-get install xpad;
     echo "";
-    
+
     # Confirmation of installation
     sudo dpkg -l xpad
     echo "";
 fi
 
 ####################################### REDSHIFT ###################################
-read -p "Install Redshift?" -n 1;
+read -p "Install Redshift? (press y for yes)" -n 1;
 echo "";
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -44,14 +44,14 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "### Redshift                                        ###";
     echo "#######################################################";
     echo "";
-    
+
     echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Installing Redshift<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<";
     sudo apt-get install redshift redshift-gtk
     echo "";
-    
+
     echo "Writing ~/.config/redshift.conf";
-    
-cat >~/.config/redshift.conf <<EOL
+
+    cat >~/.config/redshift.conf <<EOL
 ; Global settings for redshift
 [redshift]
 ; Set the day and night screen temperatures
@@ -109,7 +109,7 @@ lon=${longitude}
 [randr]
 ;screen=1
 EOL
-    
+
     echo "Finished Writing ~/.config/redshift.conf";
     echo "---------------------------------------------------------------------------------------";
     echo "---Setting redshift to autostart on system startup---";
@@ -128,6 +128,60 @@ EOL
     sudo sed -i 's/^X-GNOME-Autostart-enabled=false/X-GNOME-Autostart-enabled=true/g' ~/.config/autostart/redshift-gtk.desktop
     sudo sed -i 's/^Hidden=true/Hidden=false/g' ~/.config/autostart/redshift-gtk.desktop
     echo "---------------------------------------------------------------------------------------";
-    
+
     echo "";
-fi;
+fi
+
+####################################### Terminator ###################################
+read -p "Install Terminator? (press y for yes)" -n 1;
+echo "";
+
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "";
+    echo "#######################################################";
+    echo "### Terminator                                      ###";
+    echo "#######################################################";
+    echo "";
+
+    sudo add-apt-repository ppa:gnome-terminator
+    sudo apt-get update
+    sudo apt-get install terminator
+    echo "";
+fi
+
+
+
+####################################### Vim Editor ###################################
+read -p "Install Vim Editor? (press y for yes)" -n 1;
+echo "";
+
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "";
+    echo "#######################################################";
+    echo "### Vim Editor                                      ###";
+    echo "#######################################################";
+    echo "";
+
+    sudo apt install vim
+    echo "";
+fi
+
+####################################### Safe Eyes ###################################
+read -p "Install Safe Eyes? (press y for yes)" -n 1;
+echo "";
+
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "";
+    echo "#######################################################";
+    echo "### Safe Eyes                                       ###";
+    echo "#######################################################";
+    echo "";
+
+    sudo add-apt-repository ppa:slgobinath/safeeyes
+    sudo apt update
+    sudo apt install safeeyes
+    echo "";
+fi
+
+#Install dependencies
+sudo apt-get install -f
