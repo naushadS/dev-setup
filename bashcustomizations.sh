@@ -54,7 +54,14 @@ alias gf='git fetch'
 alias gb='git branch -v'
 alias gr='git remote -v'
 alias gp='git pull'
+alias gs='git stash list'
 
+alias redistart='sudo systemctl start redis-server'
+alias redisstop='sudo systemctl stop redis-server'
+alias mongostart='sudo systemctl start mongodb'
+alias mongostop='sudo systemctl stop mongodb'
+
+alias nmdp='cd ~/code/javascript/work/mdp-nodejs-api'
 EOF
 source ~/.bashrc
 echo "aliases added!"

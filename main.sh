@@ -96,14 +96,14 @@ function main(){
             bash ./miscellaneous.sh
         fi
 
-        if [ $ARG == "bashcustomization" ] || [ $ARG == "all" ]; then
+        if [ $ARG == "bashcustomizations" ] || [ $ARG == "all" ]; then
             # Run the bashcustomization.sh Script
             echo "------------------------------";
-            echo "Setting up bashcustomization";
-            echo "Currently Supported Options: Bash Prompt String Customiation, Genreraal Bash Aliases";
+            echo "Setting up bashcustomizations";
+            echo "Currently Supported Options: Bash Prompt String Customization, General Bash Aliases";
             echo "------------------------------";
             echo "";
-            bash ./bashcustomization.sh
+            bash ./bashcustomizations.sh
         fi
 
         if [ $ARG == "test" ] || [ $ARG == "all" ]; then

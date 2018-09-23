@@ -1,16 +1,17 @@
 dev-setup
 ==========
 
-## Motivation
+Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  `dev-setup` aims to **simplify** the process with **easy-to-understand instructions** and **scripts** to **automate the setup** of the following:
 
-Setting up a new developer machine can be an **ad-hoc, manual, and time-consuming** process.  `dev-setup` aims to **simplify** the process with **easy-to-understand instructions** and **dotfiles/scripts** to **automate the setup** of the following:
-
-* **Developer tools**: git, Python, Node.js, etc
-* **Developer apps**: Chrome, Mozilla, Visual Studio Code, Docker etc
-* **Data Science Tools**: IPython Notebook, NumPy, Pandas, Scikit-Learn, Matplotlib, Seaborn etc
-* **Common data stores**: MySQL, PostgreSQL, MongoDB, Couchbase, Redis, and Elasticsearch
-* **Big Data platforms**: Spark (with IPython Notebook integration) and MapReduce
-* **Utilities**: xpad, Redshift
+* **Developer tools**: git, Node.js, Docker, etc
+* **Developer apps**: Google Chrome, Visual Studio Code, Postman, Sky for linux, VLC, Spotify etc
+* **Data Science Tools**: Anaconda Distribution etc
+* **Common data stores**: Redis, MongoDB etc
+* **Big Data platforms**: (...Under Development)
+* **Utilities**: xpad, Redshift, Terminator, Vim Editor, Safe Eyes etc
+* **Libraries**: thefuck, beautysh etc
+* **Miscellaneous**: (...stuff that will fix minor annoyances with ubuntu and make ubuntu great again)
+* **Bash Customizations**: Prompt String Customization, Some General Bash Alises etc
 
 
 ### But...I Don't Need All These Tools!
@@ -21,72 +22,82 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 
 If you're interested in automation, `dev-setup` provides a customizable [setup script](#single-setup-script).  There's really no one-size-fits-all solution for developers so you're encouraged to make tweaks to suit your needs.
 
-[Credits](#credits): This repo builds on the awesome work from [Donne Martin](https://github.com/donnemartin) who built the same thing for Mac OS X Environment, the repository of which is [donnemartin/dev-setup](https://github.com/donnemartin/dev-setup).
+[Credits](#credits): This repo builds on the awesome work from [Donne Martin](https://github.com/donnemartin) who built the similar thing for Mac OS X Environment, the repository of which is [donnemartin/dev-setup](https://github.com/donnemartin/dev-setup).
 
-### Sections Summary
+# Sections Summary
 * Section 1 contains the scripts and instructions to set up your system.
-* Sections 2 through 8 detail more information about installation, configuration, and usage for topics in Section 1.
+* Sections 2 through 11 detail more information about installation, configuration, and usage for topics in Section 1.
 
 ## Section 1: Installation
 
-**Scripts tested on Ubuntu 16.04**
+**Scripts tested on Ubuntu 18.04**
 
-* [Single Setup Script](#single-setup-script)
-* [devtools.sh script](#devtools-script)
-    * Sets up Docker (open source software platform to create, deploy and manage virtualized application containers)
+* [Single Setup Script](#single-setup-script) <- Click here to jump to installation.
+* [devtools.sh script](#devtoolssh-script)
+    * Sets up Tools and Programming languages geared towards s/w development- [See List](#section-2-developer-tools)
+* [devapps.sh script](#devappssh-script)
+    * Sets up Applications which are must for any developer to make Software Developent convenient and enjoyable- [See List](#section-3-developer-apps)
+* [datasciencetools.sh](#datasciencetoolssh-script)
+    * Sets up tools geared towards Data Science- [See List](#section-4-data-science-tools)
 * [datastores.sh script](#datastoressh-script)
-    * Sets up Redis (open-source in-memory database project implementing a distributed, in-memory key-value store with optional durability.)
-* [utils.sh script](#utils-script)
-    * Sets up XPAD (Simple Sticky note App.)
-    * Sets up Redshift (Redshift adjusts the color temperature according to the position of the sun.  This may help your eyes hurt less if you are working in front of the screen at night.)
+    * Sets up common data stores- [See List](#section-5-data-stores)
+* [utils.sh script](#utilssh-script)
+    * Sets up must-have utilities- [See List](#section-7-utilities)
+* [libraries.sh script](#librariessh-script)
+    * Sets up some essential libraries- [See List](#section-8-libraries)
+* [miscellaneous.sh script](#miscellaneoussh-script)
+    * Sets up Tweaks and Themes- [See List](#section-9-miscellaneous)
+* [bashcustomizations.sh script](#bashcustomizationssh-script)
+    * Sets up some cool bash customizations- [See List](#section-10-bash-customizations)
 
 ## Section 2: Developer Tools
 
 * [Git](#git)
-* [Docker](#docker)
-* [Python](#python)
-* [Pip](#pip)
 * [Node.js](#node.js)
+* [Docker](#docker)
 
 ## Section 3: Developer Apps
 
 * [Chrome](#chrome)
-* [Mozilla](#mozilla)
 * [Visual Studio Code](#visualstudiocode)
+* [Postman](#postman)
+* [Sky for linux ](#skyforlinux)
+* [VLC](#vlc)
+* [Spotify](#spotify)
 
 ## Section 4: Data Science Tools
 
-* [Anaconda](#anaconda)
-* [IPython Notebook](#ipython-notebook)
-* [NumPy](#numpy)
-* [Pandas](#pandas)
-* [Matplotlib](#matplotlib)
-* [Seaborn](#seaborn)
-* [Scikit-learn](#scikit-learn)
-* [SciPy](#scipy)
-* [Bokeh](#bokeh)
+* [Anaconda Distribution](#anacondadistribution)
 
 ## Section 5: Data Stores
 
-* [MySQL](#mysql)
-* [PostgreSQL](#postgresql)
-* [MongoDB](#mongodb)
-* [couchbase](#couchbase)
 * [Redis](#redis)
-* [Elasticsearch](#elasticsearch)
+* [MongoDB](#mongodb)
 
 ## Section 6: Big Data Platforms, AWS
 
-* [Spark](#spark)
-* [MapReduce](#mapreduce)
-* [AWS Machine Learning](#aws-machine-learning)
+***This section is under development.***
 
 ## Section 7: Utilities
 
 * [xpad](#xpad)
 * [Redshift](#redshift)
 
-## Section 8: Misc
+## Section 8: Libraries
+
+* [thefuck](#thefuck)
+* [beautysh](#beautysh)
+
+## Section 9: Miscellaneous
+
+* [Tweaks](#tweaks)
+
+## Section 10: Bash Customizations
+
+* [PromptString](#promptstring)
+* [BashAliases](#bashaliases)
+
+## Section 11: Misc
 
 * [Contributions](#contributions)
 * [Credits](#credits)
@@ -125,11 +136,21 @@ Run `devtools.sh` and `utils.sh`:
 * [main](https://github.com/naushads/dev-setup/blob/master/main.js)
     * Runs specified scripts
 * [devtools.sh](https://github.com/naushads/dev-setup/blob/master/devtools.sh)
-    * Sets up Developer tools(Docker)
+    * Sets up Tools and Programming languages geared towards s/w development- [See List](#section-2-developer-tools)
+* [devapps.sh](https://github.com/naushads/dev-setup/blob/master/devapps.sh)
+    * Sets up Applications which are must for any developer to make Software Developent convenient and enjoyable- [See List](#section-3-developer-apps)
+* [datasciencetools.sh](https://github.com/naushads/dev-setup/blob/master/datasciencetools.sh)
+    * Sets up tools geared towards Data Science- [See List](#section-4-data-science-tools)
 * [datastores.sh](https://github.com/naushads/dev-setup/blob/master/datastores.sh)
-    * Sets up Data Stores(Redis)
+    * Sets up common data stores- [See List](#section-5-data-stores)
 * [utils.sh](https://github.com/naushads/dev-setup/blob/master/utils.sh)
-    * Sets up Utility Apps(Xpad and Redshift)
+    * Sets up must-have utilities- [See List](#section-7-utilities)
+* [libraries.sh](https://github.com/naushads/dev-setup/blob/master/libraries.sh)
+    * Sets up some essential libraries- [See List](#section-8-libraries)
+* [miscellaneous.sh](https://github.com/naushads/dev-setup/blob/master/miscellaneous.sh)
+    * Sets up Tweaks and Themes- [See List](#section-9-miscellaneous)
+* [bashcustomizations.sh](https://github.com/naushads/dev-setup/blob/master/bashcustomizations.sh)
+    * Sets up some cool bash customizations- [See List](#section-10-bash-customizations)
 
 **Notes:**
 
@@ -139,42 +160,53 @@ Run `devtools.sh` and `utils.sh`:
 * `main.sh` runs `sudo apt-get update` command, which takes a while to complete as some libraries need to be installed before proceeding.
 * **When `main.sh` completes, be sure to restart your computer for all updates to take effect.**
 
-I encourage you to read through Section 1 so you have a better idea of what each installation script does.  The following discussions describe in greater detail what is executed when running the [main.sh](https://github.com/naushads/dev-setup/blob/master/main.sh) script.
-
 ### devtools.sh script
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/commands.png">
-  <br/>
-</p>
 
 To set up developer tools, run the `devtools.sh` script:
 
     $ ./devtools.sh
 
-### datastores.sh script
+### devapps.sh script
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/datastores.png">
-  <br/>
-</p>
+To set up developer apps, run the `devapps.sh` script:
+
+    $ ./devapps.sh
+
+### datasciencetools.sh script
+
+To set up developer apps, run the `datasciencetools.sh` script:
+
+    $ ./datasciencetools.sh
+
+### datastores.sh script
 
 To set up common data stores, run the `datastores.sh` script:
 
     $ ./datastores.sh
 
-[Section 5: Data Stores](#section-5-data-stores) describes the installed packages and usage.
+### utils.sh script
 
-### utilities.sh script
+To set up utilities, run the `utils.sh` script:
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/xcode.jpg">
-  <br/>
-</p>
+    $ ./utils.sh
 
-To set up utilities, run the `utilities.sh` script:
+### libraries.sh script
 
-    $ ./utilities.sh
+To set up utilities, run the `libraries.sh` script:
+
+    $ ./libraries.sh
+
+### miscellaneous.sh script
+
+To set up utilities, run the `miscellaneous.sh` script:
+
+    $ ./miscellaneous.sh
+
+### bashcustomizations.sh script
+
+To set up utilities, run the `bashcustomizations.sh` script:
+
+    $ ./bashcustomizations.sh
 
 ## Section 2: Developer Tools
 
@@ -244,7 +276,19 @@ The [utilities.sh script](#utilitiessh-script) installs Xpad.
 
 The [utilities.sh script](#utilitiessh-script) installs Redshift.
 
-## Section 8: Misc
+## Section 8: Libraries
+
+***This section is under development.***
+
+## Section 9: Miscellaneous
+
+***This section is under development.***
+
+## Section 10: Bash Customizations
+
+***This section is under development.***
+
+## Section 11: Misc
 
 ### Contributions
 
