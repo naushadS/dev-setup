@@ -289,9 +289,55 @@ The [devapps.sh script](#devappssh-script) installs Visual Studio Code.
 
 The [devapps.sh script](#devappssh-script) installs Postman.
 
+### Sky for linux
+
+<p align="center">
+    <img src="https://access.redhat.com/sites/default/files/sky.png" width="250" height="250">
+    <br/>
+</p>
+
+[Sky For Linux](https://tel.red/linux.php) is an unofficial client for skype for business.
+
+#### Installation
+
+The [devapps.sh script](#devappssh-script) installs Sky For Linux.
+
+### VLC
+
+<p align="center">
+    <img src="https://vignette.wikia.nocookie.net/logopedia/images/e/e6/VLC_Icon.svg" width="250" height="250">
+    <br/>
+</p>
+
+[VLC Media Player](https://www.videolan.org/vlc/) is a free and open-source, portable, cross-platform media player and streaming media server.
+
+### Spotify
+
+<p align="center">
+    <img src="https://developer.spotify.com/assets/branding-guidelines/icon4@2x.png" width="250" height="250">
+    <br/>
+</p>
+
+[Spotify](https://www.spotify.com) Spotify is a digital music streaming service that gives you access to millions of songs and curated playlists.
+
+#### Installation
+
+The [devapps.sh script](#devappssh-script) installs Spotify.
+
 ## Section 4: Data Science Tools
 
-***This section is under development.***
+### Anaconda Distribution
+
+<p align="center">
+    <img src="https://www.anaconda.com/wp-content/uploads/2017/08/Anaconda-Distribution-Diagram.png">
+    <br/>
+</p>
+
+[Anaconda Distribution](https://www.anaconda.com/distribution/) is a free, easy-to-install package manager, environment manager and Python distribution with a collection of 1,000+ open source packages provided by Continuum Analytics.
+
+#### Installation
+
+The [datasciencetools.sh script](#datasciencetoolsh-script) installs Anaconda Distribution.
 
 ## Section 5: Data Stores
 
@@ -307,6 +353,19 @@ The [devapps.sh script](#devappssh-script) installs Postman.
 #### Installation
 
 The [datastores.sh script](#datastoressh-script) installs Redis.
+
+### MongoDB
+
+<p align="center">
+  <img src="https://webassets.mongodb.com/_com_assets/cms/MongoDB-Logo-5c3a7405a85675366beb3a5ec4c032348c390b3f142f5e6dddf1d78e2df5cb5c.png" width="650" height="250">
+  <br/>
+</p>
+
+[MongoDB](http://mongodb.com/) is a free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemata.
+
+#### Installation
+
+The [datastores.sh script](#datastoressh-script) installs MongoDB.
 
 ## Section 6: Big Data Platforms, AWS
 
