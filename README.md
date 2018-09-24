@@ -305,7 +305,7 @@ The [devapps.sh script](#devappssh-script) installs Sky For Linux.
 ### VLC
 
 <p align="center">
-    <img src="https://vignette.wikia.nocookie.net/logopedia/images/e/e6/VLC_Icon.svg" width="250" height="250">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/VLC_icon.png" width="250" height="250">
     <br/>
 </p>
 
