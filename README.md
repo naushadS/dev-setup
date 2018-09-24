@@ -58,16 +58,16 @@ If you're interested in automation, `dev-setup` provides a customizable [setup s
 
 ## Section 3: Developer Apps
 
-* [Chrome](#chrome)
-* [Visual Studio Code](#visualstudiocode)
+* [Chrome](#google-chrome)
+* [Visual Studio Code](#visual-studio-code)
 * [Postman](#postman)
-* [Sky for linux ](#skyforlinux)
+* [Sky for linux ](#sky-for-linux)
 * [VLC](#vlc)
 * [Spotify](#spotify)
 
 ## Section 4: Data Science Tools
 
-* [Anaconda Distribution](#anacondadistribution)
+* [Anaconda Distribution](#anaconda-distribution)
 
 ## Section 5: Data Stores
 
@@ -209,6 +209,31 @@ To set up utilities, run the `bashcustomizations.sh` script:
     $ ./bashcustomizations.sh
 
 ## Section 2: Developer Tools
+### Git
+
+<p align="center">
+  <img src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png" width="450" height="200">
+  <br/>
+</p>
+
+[Git](https://git-scm.com/) is a version-control system for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for source-code management in software development, but it can be used to keep track of changes in any set of files.
+
+#### Installation
+
+The [devtools.sh script](#devtoolssh-script) installs Git.
+
+### Node.js
+
+<p align="center">
+  <img src="https://i0.wp.com/technology.amis.nl/wp-content/uploads/2016/04/my-first-nodejs-service.png?fit=702%2C336&ssl=1" width="450" height="200">
+  <br/>
+</p>
+
+[Node.js](https://nodejs.org) is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser.
+
+#### Installation
+
+The [devtools.sh script](#devtoolssh-script) installs Node.js.
 
 ### Docker
 
@@ -217,7 +242,7 @@ To set up utilities, run the `bashcustomizations.sh` script:
   <br/>
 </p>
 
-Docker automates the deployment of applications inside software containers.  I think the following [quote](http://www.linux.com/news/enterprise/cloud-computing/731454-docker-a-shipping-container-for-linux-code) explains docker nicely: "Docker is a tool that can package an application and its dependencies in a virtual container that can run on any Linux server. This helps enable flexibility and portability on where the application can run, whether on premise, public cloud, private cloud, bare metal, etc".
+[Docker](https://www.docker.com) automates the deployment of applications inside software containers.  I think the following [quote](http://www.linux.com/news/enterprise/cloud-computing/731454-docker-a-shipping-container-for-linux-code) explains docker nicely: "Docker is a tool that can package an application and its dependencies in a virtual container that can run on any Linux server. This helps enable flexibility and portability on where the application can run, whether on premise, public cloud, private cloud, bare metal, etc".
 
 #### Installation
 
@@ -225,7 +250,44 @@ The [devtools.sh script](#devtoolssh-script) installs Docker.
 
 ## Section 3: Developer Apps
 
-***This section is under development.***
+### Google Chrome
+
+<p align="center">
+  <img src="https://pbs.twimg.com/profile_images/1037025533182193664/aCWlGSZF_400x400.jpg" width="250" height="250">
+  <br/>
+</p>
+
+[Google Chrome](https://www.google.com/chrome/) is the most popular web browser from the house of google inc.
+
+#### Installation
+
+The [devapps.sh script](#devappssh-script) installs Google Chrome.
+
+### Visual Studio Code
+
+<p align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Visual_Studio_Code_1.18_icon.svg/512px-Visual_Studio_Code_1.18_icon.svg.png" width="250" height="250">
+    <br/>
+</p>
+
+[Visual Studio Code](https://code.visualstudio.com/) is a code editor redefined and optimized for building and debugging modern web and cloud applications. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring.
+
+#### Installation
+
+The [devapps.sh script](#devappssh-script) installs Visual Studio Code.
+
+### Postman
+
+<p align="center">
+    <img src="https://www.getpostman.com/img/v2/products/equation-postman.svg" width="250" height="250">
+    <br/>
+</p>
+
+[Postman](https://www.getpostman.com/) makes API development faster, easier, and better.
+
+#### Installation
+
+The [devapps.sh script](#devappssh-script) installs Postman.
 
 ## Section 4: Data Science Tools
 
