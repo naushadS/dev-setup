@@ -225,7 +225,7 @@ The [devtools.sh script](#devtoolssh-script) installs Git.
 ### Node.js
 
 <p align="center">
-  <img src="https://i0.wp.com/technology.amis.nl/wp-content/uploads/2016/04/my-first-nodejs-service.png?fit=702%2C336&ssl=1" width="450" height="200">
+  <img src="https://i0.wp.com/technology.amis.nl/wp-content/uploads/2016/04/my-first-nodejs-service.png" width="450" height="200">
   <br/>
 </p>
 
@@ -399,15 +399,58 @@ The [utilities.sh script](#utilitiessh-script) installs Redshift.
 
 ## Section 8: Libraries
 
-***This section is under development.***
+### thefuck
+
+[thefuck](https://github.com/nvbn/thefuck) is an app which corrects your previous console command.
+
+#### Installation
+
+The [libraries.sh script](#librariessh-script) installs thefuck.
+
+### beautysh
+
+[beautysh](https://github.com/bemeurer/beautysh) is a bash beautifier.
+
+#### Installation
+
+The [libraries.sh script](#librariessh-script) installs beautysh.
 
 ## Section 9: Miscellaneous
 
-***This section is under development.***
+### tweaks
+
+Ubuntu Tweaks - [See for yourself](https://github.com/naushads/dev-setup/blob/master/miscellaneous.sh)
+
+#### Installation
+
+The [miscellaneous.sh script](#miscellaneoussh-script) configures tweaks.
 
 ## Section 10: Bash Customizations
 
-***This section is under development.***
+### promptstring
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/7782134/45997718-2ca30300-c0be-11e8-96a9-d53e9ea63d7c.png">
+  <br/>
+</p>
+
+A cool looking command prompt string which shows current branch name if in git repository folder which looks something like this.
+
+[Refer](https://github.com/naushads/dev-setup/blob/master/bashcustomization.sh)
+
+#### Installation
+
+The [bashcustomizations.sh script](#bashcustomizationssh-script) configures prompt string.
+
+### bashaliases
+
+Aliases for some commonly used command
+
+[Refer](https://github.com/naushads/dev-setup/blob/master/bashcustomization.sh)
+
+#### Installation
+
+The [bashcustomizations.sh script](#bashcustomizationssh-script) configures bash aliases.
 
 ## Section 11: Misc
 
