@@ -57,6 +57,30 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "";
 fi
 
+####################################### kaggle api ###################################
+read -p "Install kaggle api? (press y for yes)" -n 1;
+echo "";
+
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    echo "";
+    echo "#######################################################";
+    echo "### Kaggle API                                      ###";
+    echo "#######################################################";
+    echo "";
+
+    pip install kaggle
+    echo "!!!!!!!!!!!!!!! READ INSTRUCTION !!!!!!!!!!!!!!!!!";
+    echo "Access Kaggle account at https://www.kaggle.com."
+    echo "Then go to the 'Account' tab of your user profile (https://www.kaggle.com/<username>/account) and select 'Create API Token'."
+    echo "This will trigger the download of kaggle.json in ~/Downloads, a file containing your API credentials."
+    read -n 1 -p "Press any key to continue";
+    xdg-open https://www.kaggle.com
+    read -n 1 -p "Press any key if you have downloaded kaggle.json file to ~/Downloads to configure Kaggle API";
+    mv ~/Downloads/kaggle.json ~/.kaggle/
+    chmod 600 ~/.kaggle/kaggle.json
+    echo "";
+fi
+
 #Install dependencies
 sudo apt-get install -f
 

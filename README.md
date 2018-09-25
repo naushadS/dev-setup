@@ -9,7 +9,7 @@ Setting up a new developer machine can be an **ad-hoc, manual, and time-consumin
 * **Common data stores**: Redis, MongoDB etc
 * **Big Data platforms**: (...Under Development)
 * **Utilities**: xpad, Redshift, Terminator, Vim Editor, Safe Eyes etc
-* **Libraries**: thefuck, beautysh etc
+* **Libraries**: thefuck, beautysh, kaggle api etc
 * **Miscellaneous**: (...stuff that will fix minor annoyances with ubuntu and make ubuntu great again)
 * **Bash Customizations**: Prompt String Customization, Some General Bash Alises etc
 
@@ -87,6 +87,7 @@ If you're interested in automation, `dev-setup` provides a customizable [setup s
 
 * [thefuck](#thefuck)
 * [beautysh](#beautysh)
+* [kaggle api](#kaggle-api)
 
 ## Section 9: Miscellaneous
 
@@ -418,6 +419,19 @@ The [libraries.sh script](#librariessh-script) installs thefuck.
 #### Installation
 
 The [libraries.sh script](#librariessh-script) installs beautysh.
+
+### Kaggle API
+
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Kaggle_logo.png" width="375" height="150">
+  <br/>
+</p>
+
+[Kaggle API](https://github.com/Kaggle/kaggle-api) - Official API for https://www.kaggle.com to connect with Kaggle from command line.
+
+#### Installation
+
+The [libraries.sh script](#librariessh-script) installs and configures kaggle api.
 
 ## Section 9: Miscellaneous
 
