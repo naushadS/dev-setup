@@ -436,7 +436,7 @@ The [miscellaneous.sh script](#miscellaneoussh-script) configures tweaks.
 
 A cool looking command prompt string which shows current branch name if in git repository folder which looks something like this.
 
-[Refer](https://github.com/naushads/dev-setup/blob/master/bashcustomization.sh)
+[Refer](https://github.com/naushads/dev-setup/blob/master/bashcustomizations.sh)
 
 #### Installation
 
@@ -446,7 +446,7 @@ The [bashcustomizations.sh script](#bashcustomizationssh-script) configures prom
 
 Aliases for some commonly used command
 
-[Refer](https://github.com/naushads/dev-setup/blob/master/bashcustomization.sh)
+[Refer](https://github.com/naushads/dev-setup/blob/master/bashcustomizations.sh)
 
 #### Installation
 
