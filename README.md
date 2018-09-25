@@ -311,6 +311,10 @@ The [devapps.sh script](#devappssh-script) installs Sky For Linux.
 
 [VLC Media Player](https://www.videolan.org/vlc/) is a free and open-source, portable, cross-platform media player and streaming media server.
 
+#### Installation
+
+The [devapps.sh script](#devappssh-script) installs VLC Media Player.
+
 ### Spotify
 
 <p align="center">
