@@ -12,6 +12,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 node_stable=8.10.0
 node_latest=10.10.0
 
+#repo's root path
+repoWorkingDirectory=$(pwd)
+
 ####################################### GIT #######################################
 
 read -p "Install Git? (press y for yes)" -n 1;
@@ -74,6 +77,11 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     nvm alias node default
     nvm use default
     echo "Installed node and npm!";
+    echo "creating symlinks"
+    sudo ln -s "$NVM_DIR/versions/node/$(nvm version)/bin/node" "/usr/local/bin/node"
+    sudo ln -s "$NVM_DIR/versions/node/$(nvm version)/bin/npm" "/usr/local/bin/npm"
+    sudo ln -s "$NVM_DIR/versions/node/$(nvm version)/bin/npm" "/usr/local/bin/npx"
+    sudo ln -s "$NVM_DIR/versions/node/$(nvm version)/lib/node_modules/nodemon/bin/nodemon.js" "usr/local/bin/nodemon"
 fi
 
 ####################################### DOCKER #######################################
@@ -109,9 +117,11 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "";
     sudo apt-get install -y docker-ce
 
-    echo "Docker should now be installed, the daemon started, and the process enabled to start on boot. Check that it's running:";
+    echo "Docker should now be installed, the daemon started, and the process enabled to start on boot.";
     echo "";
-    sudo systemctl status docker
+
+    echo "disable start on boot"
+    sudo systemctl disable docker
 
     echo "Executing the Docker Command Without Sudo (Optional)";
     echo "";
@@ -123,7 +133,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
     echo "To apply the new group membership, you can log out of the server and back in, or you can type the following:";
     echo "";
-    su - ${USER}
+    #su - ${USER}
 
     echo "You will be prompted to enter your user's password to continue. Afterwards, you can confirm that your user is now added to the docker group by typing:";
     echo "";
@@ -136,6 +146,11 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "";
     echo "";
 fi
+
+###########################################FINISHING STEPS####################################
+
+#restore current working directory to repo's root path
+cd ${repoWorkingDirectory}
 
 #Install dependencies
 sudo apt-get install -f
