@@ -81,7 +81,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     sudo ln -f -s "$NVM_DIR/versions/node/$(nvm version)/bin/node" "/usr/local/bin/node"
     sudo ln -f -s "$NVM_DIR/versions/node/$(nvm version)/bin/npm" "/usr/local/bin/npm"
     sudo ln -f -s "$NVM_DIR/versions/node/$(nvm version)/bin/npm" "/usr/local/bin/npx"
-    sudo ln -f -s "$NVM_DIR/versions/node/$(nvm version)/lib/node_modules/nodemon/bin/nodemon.js" "usr/local/bin/nodemon"
+    npm install -g nodemon
+    sudo ln -f -s "$NVM_DIR/versions/node/$(nvm version)/lib/node_modules/nodemon/bin/nodemon.js" "/usr/local/bin/nodemon"
 fi
 
 ####################################### DOCKER #######################################
