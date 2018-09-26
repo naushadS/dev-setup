@@ -24,7 +24,7 @@ echo "";
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 
-cat > /usr/share/meld/meld.css << EOF
+    cat > /usr/share/meld/meld.css << EOF
 @define-color insert-bg #002200;
 @define-color insert-outline shade(@insert-bg, 1.8);
 @define-color insert-text #008800;
