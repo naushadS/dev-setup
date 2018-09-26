@@ -129,7 +129,9 @@ echo "";
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     apt-get update;
-    apt install sudo curl wget;
+    #dependencies
+    apt install sudo curl wget gnupg;
+    apt-get install snapd;
     main $@
 fi;
 
