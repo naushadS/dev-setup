@@ -78,10 +78,10 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     nvm use default
     echo "Installed node and npm!";
     echo "creating symlinks"
-    sudo ln -s "$NVM_DIR/versions/node/$(nvm version)/bin/node" "/usr/local/bin/node"
-    sudo ln -s "$NVM_DIR/versions/node/$(nvm version)/bin/npm" "/usr/local/bin/npm"
-    sudo ln -s "$NVM_DIR/versions/node/$(nvm version)/bin/npm" "/usr/local/bin/npx"
-    sudo ln -s "$NVM_DIR/versions/node/$(nvm version)/lib/node_modules/nodemon/bin/nodemon.js" "usr/local/bin/nodemon"
+    sudo ln -f -s "$NVM_DIR/versions/node/$(nvm version)/bin/node" "/usr/local/bin/node"
+    sudo ln -f -s "$NVM_DIR/versions/node/$(nvm version)/bin/npm" "/usr/local/bin/npm"
+    sudo ln -f -s "$NVM_DIR/versions/node/$(nvm version)/bin/npm" "/usr/local/bin/npx"
+    sudo ln -f -s "$NVM_DIR/versions/node/$(nvm version)/lib/node_modules/nodemon/bin/nodemon.js" "usr/local/bin/nodemon"
 fi
 
 ####################################### DOCKER #######################################

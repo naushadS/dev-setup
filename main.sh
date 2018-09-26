@@ -15,7 +15,7 @@ function main(){
             echo "Syncing the dev-setup repo to your local machine at ~/.";
             echo "------------------------------";
             echo "";
-            cd ~ && mkdir dev-setup && cd dev-setup && curl -#L https://github.com/naushads/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
+            cd ~ && mkdir -p dev-setup && cd dev-setup && curl -#L https://github.com/naushads/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
         fi
 
         if [ $ARG == "update" ] || [ $ARG == "all" ]; then
@@ -119,6 +119,8 @@ read -p "This script may overwrite existing files. Are you sure you want to proc
 echo "";
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
+    apt-get update;
+    apt install sudo curl wget;
     main $@
 fi;
 
