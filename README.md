@@ -129,7 +129,7 @@ Run `devtools.sh` and `utils.sh`:
 
 #### Running without Git
 
-    $ cd ~ && mkdir dev-setup && cd dev-setup && curl -#L https://github.com/naushads/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
+    $ cd ~ && mkdir -p dev-setup && cd dev-setup && curl -#L https://github.com/naushads/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
     $ bash main.sh [Add ARGS Here]
 
 #### Scripts
