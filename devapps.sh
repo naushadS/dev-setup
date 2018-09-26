@@ -68,8 +68,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 fi
 
 ####################################### Sky for Linux #######################################
-echo "sky for linux (skype for business client):"
-read -p "Install Sky for Linux? (press y for yes)" -n 1;
+read -p "Install Sky for Linux(skype for business client)? (press y for yes)" -n 1;
 echo "";
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then

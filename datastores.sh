@@ -59,7 +59,5 @@ fi
 #restore current working directory to repo's root path
 cd ${repoWorkingDirectory}
 
-fi
-
 #Install dependencies
 sudo apt-get install -f
