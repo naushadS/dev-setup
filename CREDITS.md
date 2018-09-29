@@ -21,3 +21,6 @@ This repo builds on the awesome work from the following repos:
 * [MongoDB](https://webassets.mongodb.com/_com_assets/cms/MongoDB-Logo-5c3a7405a85675366beb3a5ec4c032348c390b3f142f5e6dddf1d78e2df5cb5c.png)
 * [XPAD](https://launchpadlibrarian.net/17786054/xpad64.png)
 * [Redshift](http://jonls.dk/assets/redshift-icon-256.png)
+* [Terminator](https://community.linuxmint.com/img/screenshots/terminator.png)
+* [Vim Editor](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/240px-Vimlogo.svg.png)
+* [Safe Eyes](https://slgobinath.github.io/SafeEyes/assets/images/safeeyes.png)
