@@ -402,6 +402,59 @@ The [utilities.sh script](#utilitiessh-script) installs Xpad.
 
 The [utilities.sh script](#utilitiessh-script) installs Redshift.
 
+### Terminator
+<p align="center">
+  <img src="https://community.linuxmint.com/img/screenshots/terminator.png" width="650" height="350" >
+  <br/>
+</p>
+
+[Terminator](https://gnometerminator.blogspot.com/p/introduction.html) is a useful tool for arranging terminals. The main focus is arranging terminals in grids.
+
+* Features:
+    * Arrange terminals in a grid
+    * Tabs
+    * Drag and drop re-ordering of terminals
+    * Simultaneous typing to arbitrary groups of terminals
+    * Lots of keyboard shortcuts
+    * Save multiple layouts and profiles via GUI preferences editor
+    
+
+#### Installation
+
+The [utilities.sh script](#utilitiessh-script) installs Terminator.
+
+### Vim Editor
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vimlogo.svg/240px-Vimlogo.svg.png">
+  <br/>
+</p>
+
+[Vim Editor](https://www.vim.org/) is a highly configurable text editor for quickly and efficiently creating and changing any kind of text.
+
+#### Installation
+
+The [utilities.sh script](#utilitiessh-script) installs Vim Editor.
+
+### Safe Eyes
+<p align="center">
+  <img src="https://slgobinath.github.io/SafeEyes/assets/images/safeeyes.png">
+  <br/>
+</p>
+
+[Safe Eyes](https://slgobinath.github.io/SafeEyes/) is a Free and Open Source tool for Linux users to reduce and prevent repetitive strain injury (RSI).
+
+* Features:
+    * **Breaks with exercises**: The whole purpose of Safe Eyes is reminding you to take breaks while working on the computer for a long time. The break screen asks you to do some exercises which will reduce your RSI.
+    * **Strict break for workaholics**: ​Strict break mode prevents computer addicts from skipping breaks unconsciously. In skip break mode, the user cannot skip or postpone the break.
+    * **Multi-display support**: Workstations with dual monitors are cool to have but Safe Eyes locks all at the same time to relax your eyes during the break.
+    * **Notifications**: Safe Eyes shows a system notification before breaks and an audible alert at the end of breaks. Even if you are few steps away from your computer, you can hear the call for back to work.
+    * **Smart decisions**: If you are working with a fullscreen application, Safe Eyes will not bother you. It also can sense if your system is idle and postpone the break based on idle period.
+
+
+#### Installation
+
+The [utilities.sh script](#utilitiessh-script) installs Safe Eyes.
+
 ## Section 8: Libraries
 
 ### thefuck

@@ -33,6 +33,21 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     pip install --upgrade pip
     echo "Anaconda Distribution Installed!"
     echo "";
+    
+    echo "Updating all conda packages:";
+    conda install --all
+
+    echo "Installing Conda's Jupyter Packages:"
+    conda install jupyter
+    conda install jupyterlab
+    conda install nb_conda
+
+    read -p "Install ijavascript? (javascript(node.js) kernel for Jupyter Notebook.)" -n 1;
+    echo "";
+    if [[ $REPLY = ~^[Yy]$ ]]; then
+        sudo npm install -g ijavascript
+        ijsinstall
+    fi
 
 fi
 
