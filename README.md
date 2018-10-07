@@ -53,7 +53,7 @@ If you're interested in automation, `dev-setup` provides a customizable [setup s
 ## Section 2: Developer Tools
 
 * [Git](#git)
-* [Node.js](#node.js)
+* [Node.js](#nodejs)
 * [Docker](#docker)
 
 ## Section 3: Developer Apps
