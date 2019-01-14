@@ -26,10 +26,10 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Installing Redis<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<";
 
     #install redis client
-    sudo apt install redis-tools
+    sudo apt install -y redis-tools
 
     #install redis server
-    sudo apt install redis
+    sudo apt install -y redis
 
     echo "";
 fi

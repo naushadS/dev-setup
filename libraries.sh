@@ -12,10 +12,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sudo apt-get install build-essential
 
 #for media codecs to play .mp4,.api etc:
-sudo apt install ubuntu-restricted-extras
+sudo apt install -y ubuntu-restricted-extras
 
 #for netflix:
-sudo apt-get install libavcodec-extra
+sudo apt-get install -y libavcodec-extra
 
 #pipreqs - Generate requirements.txt file for any project based on imports
 pip install pipreqs

@@ -9,6 +9,15 @@ function main(){
 
     for ARG in "$@"
     do
+        if [ $ARG == "update" ] || [ $ARG == "all" ]; then
+            echo "------------------------------";
+            echo "Update packages and repositories";
+            echo "------------------------------";
+            echo "";
+            sudo apt-get update -y;
+            echo "";
+        fi
+
         if [ $ARG == "bootstrap" ] || [ $ARG == "all" ]; then
             echo "";
             echo "------------------------------";
@@ -16,15 +25,6 @@ function main(){
             echo "------------------------------";
             echo "";
             cd ~ && mkdir -p dev-setup && cd dev-setup && curl -#L https://github.com/naushads/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
-        fi
-
-        if [ $ARG == "update" ] || [ $ARG == "all" ]; then
-            echo "------------------------------";
-            echo "Update packages and repositories";
-            echo "------------------------------";
-            echo "";
-            sudo apt-get update;
-            echo "";
         fi
 
         if [ $ARG == "devtools" ] || [ $ARG == "all" ]; then
@@ -128,10 +128,10 @@ read -p "This script may overwrite existing files. Are you sure you want to proc
 echo "";
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-    apt-get update;
+    sudo apt-get update -y;
     #dependencies
-    apt install sudo curl wget gnupg;
-    apt-get install snapd;
+    sudo apt-get install -y sudo curl wget gnupg snapd;
+    sudo apt-get install -fy;
     main $@
 fi;
 

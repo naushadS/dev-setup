@@ -113,7 +113,7 @@ If you're interested in automation, `dev-setup` provides a customizable [setup s
 
 ##### Clone the Repo
 
-    $ cd ~ && git clone https://github.com/naushads/dev-setup.git && cd dev-setup
+    $ sudo apt-get update && cd ~ && git clone https://github.com/naushads/dev-setup.git && cd dev-setup
 
 **Since you probably don't want to install every section**, the `main.sh` script supports command line arguments to run only specified sections.  Simply pass in the [scripts](#scripts) that you want to install.  Below are some examples.
 
@@ -129,7 +129,7 @@ Run `devtools.sh` and `utils.sh`:
 
 #### Running without Git
 
-    $ cd ~ && mkdir -p dev-setup && cd dev-setup && curl -#L https://github.com/naushads/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
+    $ sudo apt-get update && sudo apt-get install curl && cd ~ && mkdir -p dev-setup && cd dev-setup && curl -#L https://github.com/naushads/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,LICENSE}
     $ bash main.sh [Add ARGS Here]
 
 #### Scripts
@@ -226,7 +226,7 @@ The [devtools.sh script](#devtoolssh-script) installs Git.
 ### Node.js
 
 <p align="center">
-  <img src="https://i0.wp.com/technology.amis.nl/wp-content/uploads/2016/04/my-first-nodejs-service.png" width="450" height="200">
+  <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" width="450" height="250">
   <br/>
 </p>
 
