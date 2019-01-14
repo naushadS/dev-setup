@@ -9,8 +9,8 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 #Variables
-node_stable=8.10.0
-node_latest=10.10.0
+node_stable=10.14.2
+node_latest=11.4.0
 
 #repo's root path
 repoWorkingDirectory=$(pwd)
@@ -28,8 +28,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "";
 
     echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Installing Git<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<";
-    sudo apt update
-    sudo apt install git
+    sudo apt-get update
+    sudo apt-get install -y git
     echo "Installed version:" && git --version
     echo "Enter global user.name for git: "
     read username_git
@@ -41,7 +41,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     git config --list
     echo "Git Installed and Configured!"
     echo "installing meld and setting it as default difftool";
-    sudo apt install meld
+    sudo apt-get install -y meld
     git config --global diff.tool meld
     echo "";
 fi
@@ -108,7 +108,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
     echo "update the package database with the Docker packages from the newly added repo:";
     echo "";
-    sudo apt-get update
+    sudo apt-get update -y
 
     echo "Make sure you are about to install from the Docker repo instead of the default Ubuntu 16.04 repo:";
     echo "";

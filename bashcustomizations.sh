@@ -54,7 +54,7 @@ alias gf='git fetch'
 alias gb='git branch -v'
 alias gr='git remote -v'
 alias gp='git pull'
-alias gs='git stash list'
+alias gsl='git stash list'
 
 alias redistart='sudo systemctl start redis-server'
 alias redisstop='sudo systemctl stop redis-server'
