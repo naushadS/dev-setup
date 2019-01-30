@@ -40,16 +40,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "#######################################################";
     echo "";
 
-    echo "!!!!!!!!!!!!!!! READ INSTRUCTION !!!!!!!!!!!!!!!!!";
-    read -n 1 -p "VSCODE's download webpage will open now. Download vscode installer .deb file to ~/Downloads manually. Press any key to continue";
-    xdg-open https://code.visualstudio.com/Download
-    read -n 1 -p "Press any key if you have downloaded .deb file to ~/Downloads to start vscode installation";
-    vscodedebfile="$(ls ~/Downloads/code_*.deb)"
-    sudo dpkg -i "${vscodedebfile}"
-    echo "cleaning up .deb installer file"
-    rm "${vscodedebfile}"
-    echo "Visual Studio Code Installed!"
-    echo "";
+    sudo snap install vscode --classic
 
 fi
 
