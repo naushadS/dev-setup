@@ -40,7 +40,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "#######################################################";
     echo "";
 
-    sudo snap install vscode --classic
+    sudo snap install code --classic
 
 fi
 
